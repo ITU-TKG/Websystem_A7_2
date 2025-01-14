@@ -1,0 +1,11 @@
+{% extends "base/bookroute_base.html" %}
+{% block body %}
+
+<h2>{{page.title}}</h2>
+<div>{{page.body | linebreaksbr}}</div>
+{% if page.picture %}
+    <img src="{{ page.picture.url }}"/>
+{% endif %}</br>
+<a href="{% url 'bookroute:page_update' page.id %}">編集</a>
+
+{% endblock %}

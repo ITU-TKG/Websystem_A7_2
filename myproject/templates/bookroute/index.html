@@ -1,0 +1,7 @@
+{% extends "base/bookroute_base.html" %}
+{% block body %}
+        <p>{{ datetime_now }}</p></br>
+        <a href="{% url 'bookroute:page_create' %}">ルートを登録する</a></br>
+        <a href="{% url 'bookroute:page_list' %}">ルートページ一覧</a>
+        <a href="{% url 'bookroute:page_del' %}">ルートを削除する</a>
+{% endblock %}

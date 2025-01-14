@@ -1,0 +1,10 @@
+{% extends "base/bookroute_base.html" %}
+{% block body %}
+        <h2>ルートを登録する</h2></br>
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.as_p}}
+        
+            <button type="submit">登録</button>
+        </form>
+{% endblock %}
