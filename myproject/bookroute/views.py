@@ -4,6 +4,8 @@ from .forms import PageForm
 from .models import Page
 from datetime import datetime
 from zoneinfo import ZoneInfo
+from django.views.generic.edit import DeleteView #追加1/20
+from django.urls import reverse_lazy #追加1/20
 
 class IndexView(View):
     def get(self,request):
@@ -67,4 +69,7 @@ class PageUpdateView(View):
     
 page_update=PageUpdateView.as_view()
 
-
+#追加1/20
+class PageDeleteView(DeleteView):
+    model = Page
+    success_url = reverse_lazy("bookroute:page_list")

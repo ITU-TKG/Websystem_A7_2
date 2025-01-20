@@ -3,7 +3,10 @@
 
 <ul>
     {% for page in page_list %}
-         <li><a href="{% url 'bookroute:page_detail' page.id %}">{{ page.title }}</a></li>
+         <li>
+            <a href="{% url 'bookroute:page_detail' page.id %}">{{ page.title }}</a>
+            <a href="{% url 'bookroute:page_delete' page.id %}">[削除]</a>
+        </li>
             {% empty %}
                 <div>登録されているルートが１つもありません</div>
     {% endfor %}
