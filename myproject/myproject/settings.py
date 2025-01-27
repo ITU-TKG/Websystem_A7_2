@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'bookroute.apps.BookrouteConfig',
+    'predict.apps.PredictConfig',
 ]
 
 MIDDLEWARE = [

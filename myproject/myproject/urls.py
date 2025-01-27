@@ -22,5 +22,7 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("bookroute/", include("bookroute.urls")),
+    path('predict/', include('predict.urls')),
+    path('', include('bookroute.urls')),  # bookrouteアプリのURLパターンを含める
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
